@@ -16,6 +16,10 @@ property :template_source,   String, default: "create_user.sql.erb"
 property :template_path,     String, default: "/tmp/create_user.sql"
 
 action :create do
+  action_execute_sql
+end
+
+action :execute_sql do
   template new_resource.template_path do
     source      new_resource.template_source
     cookbook    new_resource.template_cookbook
