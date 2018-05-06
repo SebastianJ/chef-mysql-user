@@ -9,7 +9,7 @@ property :root_password,     String
 property :binary_path,       String, required: true
 property :binary_args,       String
 
-property :use_sudo,          Boolean, default: false
+property :use_sudo,          kind_of: [TrueClass, FalseClass], default: false
 
 property :template_cookbook, String, default: "mysql-user"
 property :template_source,   String, default: "create_user.sql.erb"
