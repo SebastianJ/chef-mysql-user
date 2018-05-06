@@ -51,6 +51,6 @@ action :execute_sql do
 
   file new_resource.template_path do
     action :delete
-    only_if { File.exists?(new_resource.template_path) }
+    only_if { ::File.exists?(new_resource.template_path) }
   end
 end
