@@ -1,4 +1,4 @@
-define :execute_sql_file, variables: {}, template_cookbook: "mysql-user", template_source: nil do
+define :execute_sql_file, variables: {}, template_cookbook: "mysql-user", template_source: 'create_user.sql.erb' do
   template params[:template_path] do
     source      params[:template_source]
     cookbook    params[:template_cookbook]

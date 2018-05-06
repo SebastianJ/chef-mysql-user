@@ -1,1 +1,0 @@
-include_recipe "mysql-user::create_user"
